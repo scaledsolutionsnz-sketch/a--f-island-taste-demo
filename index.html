@@ -1,550 +1,644 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A &amp; F Island Taste | Samoan Bakery &amp; Takeaway, Ashburton</title>
-<meta name="description" content="A & F Island Taste is a family-owned Samoan bakery, takeaway and catering business on East Street, Ashburton. Steamed pork & lamb buns, German buns, fa'ausi, donuts, keke saiga and hot island meals — baked fresh.">
-<meta property="og:title" content="A & F Island Taste | Samoan Bakery & Takeaway, Ashburton">
-<meta property="og:description" content="Authentic island baking made fresh in Ashburton — steamed buns, German buns, fa'ausi, donuts and hot island meals. Family owned. 4.8 stars on Google.">
-<meta property="og:image" content="https://a-f-island-taste-demo.vercel.app/img/german-buns.png">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D6402B'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='26' font-weight='bold' fill='%23FBF4EA' text-anchor='middle'%3EA%26F%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#2A1710;
-  --ink-soft:#4A3327;
-  --bone:#FAF3E7;
-  --light:#FFFDF8;
-  --accent:#D6402B;
-  --accent-deep:#B23320;
-  --gold:#E9A13B;
-  --radius:18px;
-  --shadow:0 10px 30px rgba(42,23,16,.10);
-  --display:'Paytone One',sans-serif;
-  --body:'Nunito Sans',sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);color:var(--ink);background:var(--light);font-size:16px;line-height:1.65;overflow-x:hidden}
-img{max-width:100%;display:block;image-orientation:from-image}
-a{color:inherit}
-h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15}
-.wrap{width:min(1120px,92%);margin:0 auto}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.eyebrow::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--accent)}
-.section{padding:84px 0}
-.section-head{max-width:640px;margin-bottom:44px}
-.section-head h2{font-size:clamp(1.7rem,4.2vw,2.5rem);margin:12px 0 14px}
-.section-head p{color:var(--ink-soft)}
-.site-img{filter:saturate(.92) contrast(1.05)}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A &amp; F Island Taste | Samoan Bakery &amp; Takeaway, Ashburton</title>
+  <meta name="description" content="A &amp; F Island Taste, 516 East Street, Ashburton. Samoan bakery and hot takeaway kai. Pork and lamb buns, German buns, fa'ausi and a full hot cabinet. Rated 4.8 on Google. Call 03 307 1322.">
+  <link rel="icon" href="img/logo.png">
+  <meta property="og:title" content="A &amp; F Island Taste | Samoan Bakery &amp; Takeaway, Ashburton">
+  <meta property="og:description" content="Samoan bakery and hot takeaway kai on East Street, Ashburton. Rated 4.8 from 17 Google reviews.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://a-f-island-taste-demo.vercel.app/">
+  <meta property="og:image" content="https://a-f-island-taste-demo.vercel.app/img/kai-6.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sky:        #9CEBF8;
+      --sky-soft:   #E4F8FD;
+      --sky-deep:   #0E7C97;
+      --green:      #4FA828;
+      --green-deep: #2F7A16;
+      --lime:       #6FC41C;
+      --ink:        #12261B;
+      --ink-mid:    #4A5B4F;
+      --ink-soft:   #77877C;
+      --paper:      #FFFFFF;
+      --paper-warm: #F6FCFD;
+      --line:       rgba(18,38,27,0.1);
+      --radius:     16px;
+      --shadow:     0 10px 34px rgba(14,60,74,0.1);
+    }
 
-/* Intro overlay */
-#intro{position:fixed;inset:0;background:var(--ink);z-index:200;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;transition:opacity .6s ease,visibility .6s ease}
-#intro.gone{opacity:0;visibility:hidden}
-#intro .mark{width:74px;height:74px;border-radius:20px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--display);color:var(--bone);font-size:1.5rem;animation:pop .7s cubic-bezier(.2,1.4,.4,1) both}
-#intro .name{color:var(--bone);font-family:var(--display);font-size:1.15rem;letter-spacing:.04em;animation:rise .7s .15s ease both}
-@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
-@keyframes rise{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-/* Nav */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease}
-header.solid{background:rgba(42,23,16,.96);box-shadow:0 4px 20px rgba(0,0,0,.18)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;color:#fff}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:1.05rem;line-height:1.1}
-.logo .badge{width:40px;height:40px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--bone);flex:none}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{text-decoration:none;font-weight:700;font-size:.95rem;opacity:.9}
-.nav-links a:hover{opacity:1;color:var(--gold)}
-.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;padding:11px 20px;border-radius:999px;font-size:.92rem;transition:background .2s}
-.nav-call:hover{background:var(--accent-deep)}
-.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
-.burger span{display:block;width:26px;height:3px;background:#fff;border-radius:2px;margin:5px 0;transition:.3s}
-.mobile-menu{display:none;background:rgba(42,23,16,.98);padding:10px 0 22px}
-.mobile-menu.open{display:block}
-.mobile-menu a{display:block;color:#fff;text-decoration:none;font-weight:700;padding:13px 6%;font-size:1.05rem}
-.mobile-menu .m-call{margin:10px 6% 0;background:var(--accent);border-radius:999px;text-align:center;padding:14px}
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-/* Hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--ink);color:#fff;overflow:hidden}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;filter:saturate(.92) contrast(1.05)}
-.hero-slide.on{opacity:1}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,23,16,.62) 0%,rgba(42,23,16,.48) 45%,rgba(42,23,16,.72) 100%)}
-.hero-inner{position:relative;z-index:2;padding:140px 0 90px}
-.hero .eyebrow{color:var(--gold)}
-.hero .eyebrow::before{background:var(--gold)}
-.hero h1{font-size:clamp(2.1rem,6vw,3.9rem);max-width:15ch;margin:16px 0 18px}
-.hero p{max-width:52ch;font-size:1.08rem;opacity:.94}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:800;font-size:1rem;padding:16px 30px;border-radius:999px;transition:transform .2s,background .2s;min-height:44px}
-.btn:hover{transform:translateY(-2px)}
-.btn-accent{background:var(--accent);color:#fff}
-.btn-accent:hover{background:var(--accent-deep)}
-.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px)}
-.btn-ghost:hover{background:rgba(255,255,255,.2)}
-.hero-rating{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:13px 20px;border-radius:14px;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);font-weight:700;font-size:.95rem}
-.hero-rating .stars{color:var(--gold);letter-spacing:2px;font-size:1.05rem}
-.fade-up{opacity:0;transform:translateY(22px);animation:fadeUp .8s ease forwards}
-@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-.d1{animation-delay:.75s}.d2{animation-delay:.9s}.d3{animation-delay:1.05s}.d4{animation-delay:1.2s}.d5{animation-delay:1.35s}
+    h1, h2, h3 { font-family: 'Baloo 2', cursive; font-weight: 700; line-height: 1.15; }
+    img { display: block; max-width: 100%; }
+    .icon { width: 20px; height: 20px; stroke: currentColor; stroke-width: 1.9; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 
-/* Trust strip */
-.trust{background:var(--bone);padding:46px 0}
-.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.trust-item{display:flex;gap:16px;align-items:flex-start}
-.trust-item .ic{flex:none;width:48px;height:48px;border-radius:14px;background:#fff;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:var(--accent)}
-.trust-item h3{font-size:1.02rem;margin-bottom:4px;font-family:var(--body);font-weight:800}
-.trust-item p{font-size:.92rem;color:var(--ink-soft)}
+    ::selection { background: var(--green); color: #fff; }
+    html { scrollbar-color: var(--green) var(--sky-soft); }
+    :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; border-radius: 6px; }
+    .btn-primary:active, .btn-ghost:active, .nav-phone:active,
+    .btn-call:active, .btn-email:active, .gbadge:active { transform: scale(0.98); }
 
-/* Menu / services */
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .25s ease,box-shadow .25s ease;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(42,23,16,.16)}
-.card .ph{aspect-ratio:4/3;overflow:hidden}
-.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.card:hover .ph img{transform:scale(1.05)}
-.card .tx{padding:22px 24px 26px}
-.card h3{font-size:1.12rem;margin-bottom:8px}
-.card p{font-size:.94rem;color:var(--ink-soft)}
-.card .tag{display:inline-block;margin-top:12px;font-size:.8rem;font-weight:800;color:var(--accent);background:rgba(214,64,43,.09);padding:5px 12px;border-radius:999px}
+    /* ── INTRO ── */
+    .intro {
+      position: fixed; inset: 0; z-index: 1200;
+      background: var(--sky-soft);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 1; visibility: visible;
+      transition: opacity 0.7s ease, visibility 0.7s ease;
+    }
+    .intro.done { opacity: 0; visibility: hidden; }
+    .intro img {
+      width: min(52vw, 230px);
+      opacity: 0; transform: scale(0.92);
+      animation: introIn 0.9s ease 0.1s forwards;
+    }
+    @keyframes introIn { to { opacity: 1; transform: scale(1); } }
+    @media (prefers-reduced-motion: reduce) {
+      .intro { display: none; }
+      .intro img { animation: none; opacity: 1; transform: none; }
+    }
 
-/* About */
-.about{background:var(--bone)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.about-photo{position:relative}
-.about-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
-.about-photo .corner{position:absolute;left:-14px;bottom:-14px;background:var(--accent);color:#fff;font-weight:800;font-size:.88rem;padding:12px 20px;border-radius:14px;box-shadow:var(--shadow)}
-.about h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:12px 0 16px}
-.about p{color:var(--ink-soft);margin-bottom:14px}
-.checklist{list-style:none;margin-top:22px}
-.checklist li{display:flex;gap:12px;align-items:flex-start;font-weight:700;padding:8px 0}
-.checklist svg{flex:none;margin-top:3px;color:var(--accent)}
+    /* ── NAV ── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.2rem; height: 78px;
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+    }
+    #nav.scrolled {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 2px 20px rgba(14,60,74,0.12);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img {
+      height: 60px; width: auto; display: block;
+      filter: drop-shadow(0 3px 10px rgba(0,0,0,0.28));
+    }
+    #nav.scrolled .nav-logo img { filter: none; }
+    .nav-phone {
+      height: 42px; padding: 0 1.4rem;
+      display: inline-flex; align-items: center; gap: 0.5rem; line-height: 1;
+      background: var(--green); color: #fff;
+      font-family: 'Baloo 2', cursive; font-weight: 700; font-size: 0.95rem;
+      border-radius: 50px; text-decoration: none;
+      transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .nav-phone .icon { width: 16px; height: 16px; stroke-width: 2.2; }
+    .nav-phone:hover { background: var(--green-deep); transform: translateY(-1px); box-shadow: 0 5px 16px rgba(14,60,74,0.28); }
 
-/* Crew */
-.crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.crew-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 26px;text-align:center;transition:transform .25s ease}
-.crew-card:hover{transform:translateY(-6px)}
-.avatar{width:84px;height:84px;border-radius:50%;background:var(--ink);color:var(--bone);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:var(--display);font-size:1.5rem;border:3px solid var(--accent)}
-.crew-card h3{font-size:1.1rem;margin-bottom:2px}
-.crew-card .role{font-size:.85rem;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
-.crew-card p{font-size:.92rem;color:var(--ink-soft)}
+    /* ── HERO ── */
+    .hero { min-height: 100dvh; position: relative; display: flex; align-items: center; overflow: hidden; }
+    .hero-slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0; transition: opacity 1.4s ease;
+    }
+    .hero-slide.active { opacity: 1; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(115deg, rgba(6,32,42,0.9) 5%, rgba(6,32,42,0.6) 55%, rgba(6,32,42,0.35) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; padding: 6.5rem 8% 4rem; max-width: 900px; }
+    .hero-logo { width: clamp(120px, 15vw, 175px); margin-bottom: 1.6rem; filter: drop-shadow(0 8px 26px rgba(0,0,0,0.5)); }
+    .hero h1 {
+      font-size: clamp(2.7rem, 6.5vw, 4.9rem);
+      color: #fff; margin-bottom: 1.1rem; letter-spacing: -0.01em;
+    }
+    .hero h1 em { font-style: normal; color: var(--sky); }
+    .hero p {
+      font-size: 1.14rem; color: rgba(255,255,255,0.9);
+      font-weight: 300; max-width: 500px; margin-bottom: 2.3rem; line-height: 1.75;
+    }
+    .hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      padding: 0.95rem 2.2rem; background: var(--green); color: #fff;
+      font-family: 'Baloo 2', cursive; font-weight: 700; font-size: 1rem;
+      border-radius: 50px; text-decoration: none;
+      transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); box-shadow: 0 9px 24px rgba(0,0,0,0.4); }
+    .btn-ghost {
+      padding: 0.95rem 2.2rem; background: rgba(255,255,255,0.1); color: #fff;
+      font-family: 'Baloo 2', cursive; font-weight: 600; font-size: 1rem;
+      border-radius: 50px; border: 2px solid rgba(255,255,255,0.55);
+      text-decoration: none; transition: all 0.3s ease;
+    }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.2); }
 
-/* Reviews */
-.reviews{background:var(--bone)}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.review-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
-.review-card .stars{color:var(--gold);letter-spacing:3px;margin-bottom:14px;font-size:1.05rem}
-.review-card p{font-size:.97rem;margin-bottom:18px}
-.review-card .who{display:flex;align-items:center;gap:12px}
-.review-card .who .av{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--bone);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex:none}
-.review-card .who strong{display:block;font-size:.95rem}
-.review-card .who span{font-size:.82rem;color:var(--ink-soft)}
-.reviews-more{margin-top:36px;text-align:center}
-.link-accent{color:var(--accent);font-weight:800;text-decoration:none;border-bottom:2px solid rgba(214,64,43,.3);padding-bottom:2px}
-.link-accent:hover{border-color:var(--accent)}
+    /* ── GOOGLE BADGE ── */
+    .gbadge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.62rem 1.1rem; border-radius: 50px; text-decoration: none;
+      font-size: 0.85rem; line-height: 1;
+      background: rgba(255,255,255,0.95); border: 1px solid var(--line);
+      color: var(--ink); transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 14px rgba(14,60,74,0.14);
+    }
+    .gbadge:hover { transform: translateY(-1px); box-shadow: 0 7px 20px rgba(14,60,74,0.2); }
+    .gbadge svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .gbadge strong { font-family: 'Baloo 2', cursive; font-size: 1.05rem; }
+    .gbadge .stars { color: #F5A623; letter-spacing: 1.5px; font-size: 0.82rem; }
 
-/* Review banner */
-.review-banner{background:var(--ink);color:#fff;padding:70px 0}
-.rb-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px}
-.rb-inner h2{font-size:clamp(1.5rem,3.5vw,2.1rem);max-width:22ch}
-.rb-inner p{opacity:.85;margin-top:8px;max-width:46ch}
+    /* ── SHARED ── */
+    .section-heading { font-size: clamp(2rem, 4.2vw, 3rem); color: var(--ink); margin-bottom: 1rem; }
+    .section-heading em { font-style: normal; color: var(--green); }
+    .section-sub { font-size: 1.04rem; color: var(--ink-mid); max-width: 60ch; line-height: 1.8; }
+    .section-hd { margin-bottom: 3rem; }
+    .section-hd .gbadge { margin-bottom: 1.2rem; }
 
-/* Contact */
-.contact{background:var(--ink);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px}
-.contact .eyebrow{color:var(--gold)}
-.contact .eyebrow::before{background:var(--gold)}
-.contact h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:12px 0 16px}
-.contact p.lead{opacity:.85;margin-bottom:28px;max-width:48ch}
-.info-row{display:flex;gap:16px;align-items:flex-start;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-.info-row .ic{flex:none;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:var(--gold)}
-.info-row strong{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;opacity:.7;font-weight:800}
-.info-row span,.info-row a{font-size:1rem;font-weight:700;text-decoration:none}
-.hours-list{list-style:none;font-size:.95rem}
-.hours-list li{display:flex;justify-content:space-between;gap:18px;padding:3px 0;opacity:.9}
-.hours-list li span:last-child{font-weight:700}
-.contact-actions{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:36px;display:flex;flex-direction:column;gap:16px;align-self:start}
-.contact-actions h3{font-size:1.2rem;margin-bottom:6px}
-.contact-actions p{opacity:.8;font-size:.95rem;margin-bottom:10px}
-.btn-block{width:100%}
-.socials{display:flex;gap:14px;margin-top:26px}
-.socials a{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s,color .2s}
-.socials a:hover{background:var(--accent)}
+    /* ── ABOUT ── */
+    .about {
+      padding: 7rem 8%; background: var(--sky-soft);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .about-img-wrap { position: relative; }
+    .about-img { width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius); }
+    .about-badge {
+      position: absolute; bottom: -1.4rem; right: -1.4rem;
+      background: var(--green); color: #fff; padding: 1.2rem 1.6rem;
+      border-radius: 14px; box-shadow: var(--shadow); text-align: center;
+    }
+    .about-badge strong { display: block; font-family: 'Baloo 2', cursive; font-size: 1.7rem; line-height: 1.15; }
+    .about-badge span { font-size: 0.78rem; opacity: 0.9; }
+    .about-text p { color: var(--ink-mid); margin-bottom: 1.4rem; }
+    .about-checks { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.7rem; }
+    .about-check { display: flex; align-items: center; gap: 0.75rem; font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+    .check-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
 
-/* Map */
-.map-wrap{background:var(--ink);padding:0 0 60px}
-.map-wrap iframe{width:100%;height:420px;border:0;border-radius:var(--radius);display:block}
+    /* ── MENU CARDS ── */
+    .menu { padding: 7rem 8%; background: var(--paper); }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .m-card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+      overflow: hidden; box-shadow: 0 3px 14px rgba(14,60,74,0.06);
+      transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+    }
+    .m-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(79,168,40,0.45); }
+    .m-photo-wrap { overflow: hidden; }
+    .m-photo { width: 100%; height: 195px; object-fit: cover; transition: transform 0.55s ease; }
+    .m-card:hover .m-photo { transform: scale(1.05); }
+    .m-body { padding: 1.5rem 1.6rem 1.8rem; }
+    .m-label {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--sky-deep); margin-bottom: 0.55rem;
+    }
+    .m-label .icon { width: 15px; height: 15px; }
+    .m-body h3 { font-size: 1.2rem; color: var(--ink); margin-bottom: 0.4rem; }
+    .m-body p { font-size: 0.89rem; color: var(--ink-mid); line-height: 1.68; }
 
-/* Footer */
-footer{background:#1E100B;color:rgba(255,255,255,.75);padding:40px 0}
-.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
-.foot .socials{margin-top:0}
-.foot-links{display:flex;gap:22px;flex-wrap:wrap}
-.foot-links a{text-decoration:none;font-size:.9rem;font-weight:700}
-.foot-links a:hover{color:var(--gold)}
-.foot small{font-size:.85rem}
+    /* ── GALLERY ── */
+    .gallery { padding: 7rem 8%; background: var(--sky-soft); }
+    .gallery .section-hd { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+    .gallery .section-sub { margin: 0 auto; }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px;
+      gap: 10px; max-width: 1160px; margin: 0 auto;
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .g-item { position: relative; overflow: hidden; }
+    .g-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .g-item:nth-child(6) { grid-column: span 2; }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+    .g-item:hover img { transform: scale(1.06); }
 
-/* Reveal on scroll */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:translateY(0)}
+    /* ── REVIEWS ── */
+    .reviews { padding: 7rem 8%; background: var(--paper); }
+    .reviews .section-hd { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+    .reviews .section-sub { margin: 0 auto; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .review-card {
+      background: var(--sky-soft); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.8rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .r-stars { color: #F5A623; font-size: 0.98rem; letter-spacing: 2px; margin-bottom: 0.8rem; }
+    .r-text { font-size: 0.94rem; color: var(--ink-mid); line-height: 1.72; font-style: italic; margin-bottom: 1.2rem; }
+    .r-author { display: flex; align-items: center; gap: 0.75rem; }
+    .r-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--green); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Baloo 2', cursive; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+    }
+    .r-name { font-weight: 700; font-size: 0.92rem; color: var(--ink); display: block; }
+    .r-loc { font-size: 0.79rem; color: var(--ink-soft); }
+    .rev-cta { text-align: center; margin-top: 2.4rem; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.9rem 2rem; border: 2px solid var(--green); color: var(--green);
+      font-family: 'Baloo 2', cursive; font-weight: 700; font-size: 0.97rem;
+      border-radius: 50px; text-decoration: none; transition: all 0.3s ease;
+    }
+    .btn-outline:hover { background: var(--green); color: #fff; transform: translateY(-2px); }
 
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  .fade-up,.reveal{opacity:1;transform:none;animation:none;transition:none}
-  .hero-slide{transition:none}
-  #intro{display:none}
-}
+    /* ── CONTACT ── */
+    .contact { padding: 7rem 8%; background: var(--sky-soft); }
+    .contact-hd { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+    .contact-hd .section-sub { margin: 0 auto; }
+    .contact-card {
+      max-width: 1120px; margin: 0 auto; background: var(--paper);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      overflow: hidden; display: grid; grid-template-columns: 1fr 1.05fr;
+      box-shadow: var(--shadow);
+    }
+    .contact-map { min-height: 100%; }
+    .contact-map iframe { width: 100%; height: 100%; min-height: 460px; border: 0; display: block; }
+    .contact-right { padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .btn-call, .btn-email {
+      display: flex; align-items: center; justify-content: center; gap: 0.55rem;
+      width: 100%; height: 54px; line-height: 1; border-radius: 50px;
+      font-family: 'Baloo 2', cursive; font-weight: 700; font-size: 1rem;
+      text-decoration: none; transition: all 0.3s ease;
+    }
+    .btn-call { background: var(--green); color: #fff; }
+    .btn-call:hover { background: var(--green-deep); transform: translateY(-2px); box-shadow: 0 7px 20px rgba(14,60,74,0.25); }
+    .btn-email { background: transparent; color: var(--sky-deep); border: 2px solid var(--sky-deep); }
+    .btn-email:hover { background: var(--sky-deep); color: #fff; }
+    .contact-dets { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1rem; }
+    .contact-det { display: flex; align-items: flex-start; gap: 1rem; }
+    .det-icon {
+      width: 42px; height: 42px; background: rgba(79,168,40,0.12);
+      border-radius: 11px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--green-deep);
+    }
+    .det-icon .icon { width: 18px; height: 18px; }
+    .det-label {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--green-deep); font-weight: 700; display: block; margin-bottom: 0.15rem;
+    }
+    .det-val, .det-val a { font-size: 0.94rem; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; line-height: 1.6; }
+    .det-val a:hover { color: var(--green); }
+    .socials { display: flex; gap: 0.7rem; margin-top: 0.3rem; }
+    .social-btn {
+      width: 42px; height: 42px; border-radius: 50%;
+      border: 1px solid var(--line); background: rgba(79,168,40,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green-deep); transition: transform 0.25s, background 0.25s;
+    }
+    .social-btn:hover { transform: translateY(-2px); background: rgba(79,168,40,0.2); }
+    .social-btn svg { width: 19px; height: 19px; fill: currentColor; }
 
-@media (max-width:900px){
-  .trust-grid,.menu-grid,.crew-grid,.review-grid{grid-template-columns:repeat(2,1fr)}
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
-}
-@media (max-width:640px){
-  .section{padding:60px 0}
-  .nav-links{display:none}
-  .burger{display:block}
-  .trust-grid,.menu-grid,.crew-grid,.review-grid{grid-template-columns:1fr}
-  .hero-inner{padding:120px 0 70px}
-  .hero p{font-size:1rem}
-  .map-wrap iframe{height:320px}
-  .contact-actions{padding:26px}
-  .foot{flex-direction:column;text-align:center;justify-content:center}
-}
-</style>
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink); padding: 2.8rem 8%;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo img { height: 62px; width: auto; }
+    .footer-nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.86rem; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--sky); }
+    .footer-copy { font-size: 0.79rem; color: rgba(255,255,255,0.55); }
+
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-slide { transition: none; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 980px) {
+      .about { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 8%; }
+      .about-img { height: 340px; }
+      .about-badge { bottom: 1rem; right: 1rem; }
+      .menu-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+      .g-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+      .g-item:nth-child(6) { grid-column: span 2; }
+      .contact-card { grid-template-columns: 1fr; }
+      .contact-map { order: 2; }
+      .contact-right { order: 1; }
+      .contact-map iframe { min-height: 320px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 620px) {
+      #nav { height: 66px; }
+      .nav-logo img { height: 48px; }
+      .nav-phone { padding: 0 1rem; font-size: 0.88rem; }
+      .about, .menu, .gallery, .reviews, .contact, footer { padding-left: 5%; padding-right: 5%; }
+      .hero-content { padding-left: 5%; padding-right: 5%; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+      .g-item:nth-child(1), .g-item:nth-child(6) { grid-column: span 1; }
+      .contact-right { padding: 1.75rem; }
+    }
+  </style>
 </head>
 <body>
 
-<div id="intro" aria-hidden="true">
-  <div class="mark">A&amp;F</div>
-  <div class="name">Island Taste</div>
+<!-- ════════════ INTRO ════════════ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <img src="img/logo.png" alt="">
 </div>
 
-<header id="header">
-  <div class="wrap">
-    <nav class="nav">
-      <a class="logo" href="#top" aria-label="A & F Island Taste home">
-        <span class="badge">A&amp;F</span>
-        <span>Island Taste<br><small style="font-family:var(--body);font-weight:700;font-size:.68rem;letter-spacing:.12em;opacity:.8;text-transform:uppercase">Ashburton</small></span>
+<!-- ════════════ NAV ════════════ -->
+<nav id="nav">
+  <a href="#top" class="nav-logo" aria-label="A and F Island Taste home">
+    <img src="img/logo.png" alt="A &amp; F Island Taste logo">
+  </a>
+  <a href="tel:+6433071322" class="nav-phone">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+    03 307 1322
+  </a>
+</nav>
+
+<!-- ════════════ HERO ════════════ -->
+<header class="hero" id="top">
+  <div class="hero-slide active" style="background-image:url('img/kai-6.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('img/kai-2.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('img/kai-8.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img class="hero-logo" src="img/logo.png" alt="A &amp; F Island Taste logo">
+    <h1>Island Kai,<br><em>Made With Aiga</em></h1>
+    <p>Samoan baking and a hot cabinet full of the good stuff, on East Street in Ashburton.</p>
+    <div class="hero-ctas">
+      <a href="tel:+6433071322" class="btn-primary">Call to Order</a>
+      <a href="#menu" class="btn-ghost">See the Kai</a>
+      <a href="#reviews" class="gbadge" aria-label="Rated 4.8 from 17 Google reviews">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.1h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.7 2.9c2.2-2 3.7-5 3.7-8.6z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.7-2.9c-1 .7-2.4 1.2-4.2 1.2-3.1 0-5.8-2.1-6.7-5l-3.9 3C3.4 21.3 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.7.4-2.4l-3.9-3C.5 8.2 0 10 0 12s.5 3.8 1.4 5.4l3.9-3z"/><path fill="#EA4335" d="M12 4.7c2.2 0 3.7 1 4.6 1.8l3.3-3.2C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.7 1.4 6.6l3.9 3c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+        <strong>4.8</strong>
+        <span class="stars">★★★★★</span>
+        <span>17 reviews</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#visit">Find Us</a></li>
-        <li><a class="nav-call" href="tel:+6433071322">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-          03 307 1322</a></li>
-      </ul>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#menu">Menu</a>
-    <a href="#about">About</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#visit">Find Us</a>
-    <a class="m-call" href="tel:+6433071322">Call 03 307 1322</a>
+    </div>
   </div>
 </header>
 
-<main id="top">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-slide on" style="background-image:url('img/pork-lamb-buns.jpg')" role="img" aria-label="Trays of fresh steamed buns at A & F Island Taste"></div>
-  <div class="hero-slide" data-src="img/faausi.jpg"></div>
-  <div class="hero-slide" data-src="img/pineapple-custard-pie.jpg"></div>
-  <div class="wrap hero-inner">
-    <span class="eyebrow fade-up d1">516 East Street &middot; Ashburton</span>
-    <h1 class="fade-up d2">Authentic island baking, made fresh in Ashburton.</h1>
-    <p class="fade-up d3">A &amp; F Island Taste is a family-owned Samoan bakery, takeaway and catering business. Steamed pork and lamb buns, German buns, fa'ausi, fresh donuts and hot island meals — made the way they should be.</p>
-    <div class="hero-ctas fade-up d4">
-      <a class="btn btn-accent" href="tel:+6433071322">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-        Call to order</a>
-      <a class="btn btn-ghost" href="#visit">Find us</a>
+<!-- ════════════ ABOUT ════════════ -->
+<section class="about" id="about">
+  <div class="about-img-wrap reveal">
+    <img src="img/kai-4.jpg" alt="The hot cabinet at A and F Island Taste stacked with curries, chop suey and fried chicken" class="about-img">
+    <div class="about-badge">
+      <strong>Ashburton</strong>
+      <span>516 East Street</span>
     </div>
-    <div class="hero-rating fade-up d5">
-      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <span>4.8 from 17 Google reviews</span>
+  </div>
+  <div class="about-text">
+    <h2 class="section-heading reveal">Real Samoan Cooking,<br><em>From Our Family to Yours</em></h2>
+    <p class="reveal">A &amp; F Island Taste is a family run Samoan bakery and takeaway on East Street. The buns come out of the oven fresh, the hot cabinet is filled through the day, and the trays keep coming as long as people keep turning up.</p>
+    <p class="reveal">Grab a feed on your way past, phone ahead for a big order, or talk to us about catering your next family gathering or work do.</p>
+    <div class="about-checks">
+      <div class="about-check reveal"><div class="check-dot"></div> Rated 4.8 from 17 Google reviews</div>
+      <div class="about-check reveal d1"><div class="check-dot"></div> Family owned and operated in Ashburton</div>
+      <div class="about-check reveal d2"><div class="check-dot"></div> Catering, big orders and nationwide postage</div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
-<section class="trust">
-  <div class="wrap trust-grid">
-    <div class="trust-item reveal">
-      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg></div>
-      <div><h3>Family owned &amp; operated</h3><p>A registered family bakery serving the Ashburton community with real Samoan home cooking.</p></div>
-    </div>
-    <div class="trust-item reveal">
-      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-      <div><h3>Baked fresh, six days a week</h3><p>Buns, pies, donuts and treats made fresh on site — get in early before the favourites sell out.</p></div>
-    </div>
-    <div class="trust-item reveal">
-      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10h4l2 3v5h-6"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg></div>
-      <div><h3>Catering &amp; nationwide postage</h3><p>Order for events and family occasions, and get keke saiga posted anywhere in New Zealand.</p></div>
-    </div>
+<!-- ════════════ MENU ════════════ -->
+<section class="menu" id="menu">
+  <div class="section-hd">
+    <a href="#reviews" class="gbadge reveal" aria-label="Rated 4.8 from 17 Google reviews">
+      <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.1h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.7 2.9c2.2-2 3.7-5 3.7-8.6z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.7-2.9c-1 .7-2.4 1.2-4.2 1.2-3.1 0-5.8-2.1-6.7-5l-3.9 3C3.4 21.3 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.7.4-2.4l-3.9-3C.5 8.2 0 10 0 12s.5 3.8 1.4 5.4l3.9-3z"/><path fill="#EA4335" d="M12 4.7c2.2 0 3.7 1 4.6 1.8l3.3-3.2C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.7 1.4 6.6l3.9 3c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+      <strong>4.8</strong>
+      <span class="stars">★★★★★</span>
+      <span>17 reviews</span>
+    </a>
+    <h2 class="section-heading reveal">Island Favourites,<br><em>Made Fresh</em></h2>
+    <p class="section-sub reveal">Baking out of the oven each morning and a hot cabinet that keeps filling through the day. Ring ahead for larger orders.</p>
   </div>
-</section>
-
-<!-- MENU -->
-<section class="section" id="menu">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Straight from our kitchen</span>
-      <h2>Island favourites, made fresh</h2>
-      <p>These are our real bakes, photographed in our own kitchen. Call ahead to order for pick-up, or drop into the shop on East Street.</p>
-    </div>
-    <div class="menu-grid">
-      <div class="card reveal">
-        <div class="ph"><img class="site-img" src="img/pork-lamb-buns.jpg" alt="Trays of fresh steamed pork and lamb buns" loading="lazy" width="800" height="600"></div>
-        <div class="tx"><h3>Pork &amp; Lamb Buns</h3><p>Soft steamed dough buns filled with either pork or lamb — an island classic and a shop favourite.</p><span class="tag">Steamed fresh</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ph"><img class="site-img" src="img/german-buns.png" alt="Golden fried German buns filled with coconut caramel" loading="lazy" width="800" height="600"></div>
-        <div class="tx"><h3>German Buns</h3><p>Golden fried buns filled with sweet coconut caramel. Warm, sticky and dangerously moreish.</p><span class="tag">Coconut caramel</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ph"><img class="site-img" src="img/pineapple-custard-pie.jpg" alt="Half-moon pineapple and custard pies fresh from the oven" loading="lazy" width="800" height="600"></div>
-        <div class="tx"><h3>Pineapple &amp; Custard Pies</h3><p>Half-moon pies baked fresh and filled with pineapple mix or smooth custard.</p><span class="tag">Half-moon pies</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ph"><img class="site-img" src="img/faausi.jpg" alt="Containers of fa'ausi pumpkin dessert with coconut caramel" loading="lazy" width="800" height="600"></div>
-        <div class="tx"><h3>Fa'ausi</h3><p>Traditional Samoan pumpkin dessert soaked in rich coconut caramel — made the proper way.</p><span class="tag">Island dessert</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ph"><img class="site-img" src="img/donuts.jpg" alt="Boxes of mixed icing donuts packed for a catering order" loading="lazy" width="800" height="600"></div>
-        <div class="tx"><h3>Mixed Icing Donuts</h3><p>Fresh donuts with mixed icing, made to order in 15-packs — perfect for shouts, fundraisers and events.</p><span class="tag">15-pack boxes</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ph"><img class="site-img" src="img/keke-saiga.jpg" alt="Bagged keke saiga Chinese cookies packed in a box for postage" loading="lazy" width="800" height="600"></div>
-        <div class="tx"><h3>Keke Saiga (Chinese Cookies)</h3><p>Five-packs of keke saiga, made fresh and posted nationwide — a taste of home wherever you are in NZ.</p><span class="tag">Postage nationwide</span></div>
+  <div class="menu-grid">
+    <div class="m-card reveal">
+      <div class="m-photo-wrap"><img class="m-photo" src="img/pork-lamb-buns.jpg" alt="Trays of fresh steamed pork and lamb buns" loading="lazy"></div>
+      <div class="m-body">
+        <span class="m-label"><svg class="icon" viewBox="0 0 24 24"><path d="M4 14a8 8 0 0 1 16 0z"/><path d="M2 17h20"/><path d="M6 20h12"/></svg>Bakery</span>
+        <h3>Pork &amp; Lamb Buns</h3>
+        <p>Soft steamed buns packed with seasoned pork or lamb. The ones people ring ahead for.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section about" id="about">
-  <div class="wrap about-grid">
-    <div class="about-photo reveal">
-      <img class="site-img" src="img/german-buns.png" alt="Close-up of a coconut caramel German bun from A & F Island Taste" loading="lazy" width="800" height="600">
-      <span class="corner">Made in Ashburton</span>
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Our story</span>
-      <h2>Real Samoan home cooking, from our family to yours</h2>
-      <p>A &amp; F Island Taste is a family-owned bakery, takeaway and catering business on East Street, Ashburton. We bake the food we grew up with — steamed buns, fa'ausi, keke saiga and fresh donuts — alongside hot island meals like lamb chops and sapasui.</p>
-      <p>Whether it's lunch on the go, a box of donuts for the office, or catering for a family occasion, everything is made fresh and priced fairly.</p>
-      <ul class="checklist">
-        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Family owned and operated</li>
-        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Traditional Samoan recipes, baked fresh on site</li>
-        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Takeaway, event catering and nationwide postage</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- CREW -->
-<section class="section" id="crew">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Meet the crew</span>
-      <h2>The family behind the food</h2>
-    </div>
-    <div class="crew-grid">
-      <div class="crew-card reveal">
-        <div class="avatar">A</div>
-        <h3>Avau</h3>
-        <div class="role">Owner / Head Baker</div>
-        <p>Runs the kitchen and the shop — the recipes, the baking and the friendly service start here.</p>
+    <div class="m-card reveal d1">
+      <div class="m-photo-wrap"><img class="m-photo" src="img/german-buns.png" alt="Coconut caramel German buns on a tray" loading="lazy"></div>
+      <div class="m-body">
+        <span class="m-label"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 10h.01M15 10h.01M9 15c1.5 1.2 4.5 1.2 6 0"/></svg>Sweet</span>
+        <h3>German Buns</h3>
+        <p>Coconut caramel through a soft bun, sticky and sweet the way they should be.</p>
       </div>
-      <div class="crew-card reveal">
-        <div class="avatar">BT</div>
-        <h3>Bakery Team</h3>
-        <div class="role">Fresh every morning</div>
-        <p>Up early steaming buns, frying donuts and filling pies so the cabinet is full when the doors open.</p>
+    </div>
+    <div class="m-card reveal d2">
+      <div class="m-photo-wrap"><img class="m-photo" src="img/pineapple-custard-pie.jpg" alt="Golden pineapple and custard pies" loading="lazy"></div>
+      <div class="m-body">
+        <span class="m-label"><svg class="icon" viewBox="0 0 24 24"><path d="M3 17h18l-2-7H5z"/><path d="M12 10V4"/><path d="M9 6l3-2 3 2"/></svg>Pies</span>
+        <h3>Pineapple &amp; Custard Pies</h3>
+        <p>Flaky pastry with pineapple or thick custard through the middle. Always go quick.</p>
       </div>
-      <div class="crew-card reveal">
-        <div class="avatar">CE</div>
-        <h3>Catering &amp; Events</h3>
-        <div class="role">Orders &amp; occasions</div>
-        <p>Big family occasion or workplace shout? We take catering orders and pack nationwide postage boxes.</p>
+    </div>
+    <div class="m-card reveal">
+      <div class="m-photo-wrap"><img class="m-photo" src="img/faausi.jpg" alt="Fa'ausi, caramelised coconut squares" loading="lazy"></div>
+      <div class="m-body">
+        <span class="m-label"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3c-4 3-6 6-6 9a6 6 0 0 0 12 0c0-3-2-6-6-9z"/></svg>Traditional</span>
+        <h3>Fa'ausi</h3>
+        <p>Soft baked dough in coconut caramel sauce. Straight island comfort food.</p>
+      </div>
+    </div>
+    <div class="m-card reveal d1">
+      <div class="m-photo-wrap"><img class="m-photo" src="img/kai-1.jpg" alt="Chocolate glazed twisted donuts on a tray" loading="lazy"></div>
+      <div class="m-body">
+        <span class="m-label"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Donuts</span>
+        <h3>Twists &amp; Iced Donuts</h3>
+        <p>Hand twisted and glazed, plus the mixed icing donuts the kids come in for.</p>
+      </div>
+    </div>
+    <div class="m-card reveal d2">
+      <div class="m-photo-wrap"><img class="m-photo" src="img/kai-3.jpg" alt="Hot cabinet with chop suey, curries and fried chicken" loading="lazy"></div>
+      <div class="m-body">
+        <span class="m-label"><svg class="icon" viewBox="0 0 24 24"><path d="M4 8h16v3a8 8 0 0 1-16 0z"/><path d="M2 21h20"/><path d="M9 4c0-1 1-1 1-2M13 4c0-1 1-1 1-2"/></svg>Hot Cabinet</span>
+        <h3>Hot Takeaway Kai</h3>
+        <p>Curries, chop suey, fried chicken, ribs, taro and rice. Filled up fresh through the day.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section class="section reviews" id="reviews">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">What Ashburton says</span>
-      <h2>Rated 4.8 stars on Google</h2>
-      <p>Real reviews from our Google Business Profile.</p>
-    </div>
-    <div class="review-grid">
-      <div class="review-card reveal">
-        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Yummy food and always the most friendliest service."</p>
-        <div class="who"><span class="av">MC</span><div><strong>Merlinta Centeno</strong><span>Google review</span></div></div>
-      </div>
-      <div class="review-card reveal">
-        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Amazing food &amp; wonderful service! The lamb chops here are absolutely delicious — tender, flavourful, and cooked to perfection!"</p>
-        <div class="who"><span class="av">YT</span><div><strong>Ye Tian</strong><span>Google review</span></div></div>
-      </div>
-      <div class="review-card reveal">
-        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Love this place, the food is amazing!!"</p>
-        <div class="who"><span class="av">CR</span><div><strong>Capri Rutene</strong><span>Google review</span></div></div>
-      </div>
-    </div>
-    <div class="reviews-more reveal">
-      <a class="link-accent" href="https://www.google.com/maps/search/?api=1&amp;query=A%20%26%20F%20Island%20Taste%20516%20East%20Street%20Ashburton" target="_blank" rel="noopener">See all our Google reviews &rarr;</a>
-    </div>
+<!-- ════════════ GALLERY ════════════ -->
+<section class="gallery" id="gallery">
+  <div class="section-hd">
+    <h2 class="section-heading reveal">Straight From <em>the Cabinet</em></h2>
+    <p class="section-sub reveal">A look at what is going in the trays on any given day.</p>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="g-item"><img src="img/kai-6.jpg" alt="Full hot cabinet with chop suey, fried rice, sticky chicken and curry" loading="lazy"></div>
+    <div class="g-item"><img src="img/kai-8.jpg" alt="Fried chicken and sticky barbecue ribs in the cabinet" loading="lazy"></div>
+    <div class="g-item"><img src="img/kai-2.jpg" alt="Tray of lamb and pumpkin curry" loading="lazy"></div>
+    <div class="g-item"><img src="img/kai-10.jpg" alt="Green beans with pork and a pumpkin curry" loading="lazy"></div>
+    <div class="g-item"><img src="img/kai-5.jpg" alt="Fried chicken, creamy vegetables and roast pork in the cabinet" loading="lazy"></div>
+    <div class="g-item"><img src="img/kai-7.jpg" alt="Chow mein, sapasui and beef stew ready to serve" loading="lazy"></div>
+    <div class="g-item"><img src="img/kai-9.jpg" alt="Barbecue ribs, fried chicken and taro in the hot cabinet" loading="lazy"></div>
   </div>
 </section>
 
-<!-- REVIEW BANNER -->
-<section class="review-banner">
-  <div class="wrap rb-inner">
-    <div class="reveal">
-      <h2>Enjoyed your kai?</h2>
-      <p>A quick Google review helps our small family business more than you know. It only takes a minute.</p>
+<!-- ════════════ REVIEWS ════════════ -->
+<section class="reviews" id="reviews">
+  <div class="section-hd">
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=A%20%26%20F%20Island%20Taste%20516%20East%20Street%20Ashburton" target="_blank" rel="noopener" class="gbadge reveal" aria-label="Rated 4.8 from 17 Google reviews">
+      <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.1h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.7 2.9c2.2-2 3.7-5 3.7-8.6z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.7-2.9c-1 .7-2.4 1.2-4.2 1.2-3.1 0-5.8-2.1-6.7-5l-3.9 3C3.4 21.3 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.7.4-2.4l-3.9-3C.5 8.2 0 10 0 12s.5 3.8 1.4 5.4l3.9-3z"/><path fill="#EA4335" d="M12 4.7c2.2 0 3.7 1 4.6 1.8l3.3-3.2C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.7 1.4 6.6l3.9 3c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+      <strong>4.8</strong>
+      <span class="stars">★★★★★</span>
+      <span>17 Google reviews</span>
+    </a>
+    <h2 class="section-heading reveal">What Ashburton <em>Reckons</em></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">&#8220;Yummy food and always the most friendliest service.&#8221;</p>
+      <div class="r-author">
+        <div class="r-avatar">MC</div>
+        <div><span class="r-name">Merlinta Centeno</span><span class="r-loc">Google review</span></div>
+      </div>
     </div>
-    <a class="btn btn-accent reveal" href="https://www.google.com/maps/search/?api=1&amp;query=A%20%26%20F%20Island%20Taste%20516%20East%20Street%20Ashburton" target="_blank" rel="noopener">Leave us a Google review</a>
+    <div class="review-card reveal d1">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">&#8220;Amazing food and wonderful service! The lamb chops here are absolutely delicious, tender, flavourful, and cooked to perfection!&#8221;</p>
+      <div class="r-author">
+        <div class="r-avatar">YT</div>
+        <div><span class="r-name">Ye Tian</span><span class="r-loc">Google review</span></div>
+      </div>
+    </div>
+    <div class="review-card reveal d2">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">&#8220;Love this place, the food is amazing!!&#8221;</p>
+      <div class="r-author">
+        <div class="r-avatar">CR</div>
+        <div><span class="r-name">Capri Rutene</span><span class="r-loc">Google review</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="rev-cta">
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=A%20%26%20F%20Island%20Taste%20516%20East%20Street%20Ashburton" target="_blank" rel="noopener" class="btn-outline">Been in? Leave a review</a>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section contact" id="visit">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Find us</span>
-      <h2>Visit the shop or call ahead</h2>
-      <p class="lead">We're on East Street in central Ashburton. Call to order for pick-up, ask about catering, or just drop in.</p>
-      <div class="info-row">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><strong>Address</strong><span>516 East Street, Ashburton 7700</span></div>
-      </div>
-      <div class="info-row">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg></div>
-        <div><strong>Phone</strong><a href="tel:+6433071322">03 307 1322</a></div>
-      </div>
-      <div class="info-row">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
-        <div><strong>Email</strong><a href="#" data-gmail data-user="avaufoaga1" data-domain="hotmail.co.nz" data-su="Order%20enquiry%20%E2%80%94%20A%20%26%20F%20Island%20Taste" data-body="Talofa%2C%0A%0AI%27d%20like%20to%20place%20an%20order%20with%20A%20%26%20F%20Island%20Taste.%0A%0AThanks%21"><span data-email-text>Email us</span></a></div>
-      </div>
-      <div class="info-row">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <div><strong>Hours</strong>
-          <ul class="hours-list">
-            <li><span>Monday &ndash; Tuesday</span><span>8:30am &ndash; 5:00pm</span></li>
-            <li><span>Wednesday &ndash; Saturday</span><span>8:30am &ndash; 8:00pm</span></li>
-            <li><span>Sunday</span><span>Closed</span></li>
-          </ul>
+<!-- ════════════ CONTACT ════════════ -->
+<section class="contact" id="visit">
+  <div class="contact-hd">
+    <h2 class="section-heading reveal">Come <em>See Us</em></h2>
+    <p class="section-sub reveal">We are on East Street in central Ashburton. Call ahead for pick up, ask about catering, or just drop in.</p>
+  </div>
+  <div class="contact-card reveal">
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps?q=A+%26+F+Island+Taste,+516+East+Street,+Ashburton+7700&output=embed"
+        title="Map showing A and F Island Taste at 516 East Street, Ashburton"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+    <div class="contact-right">
+      <a href="tel:+6433071322" class="btn-call">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call 03 307 1322
+      </a>
+      <a href="#" class="btn-email" id="emailBtn" data-user="avaufoaga1" data-domain="hotmail.co.nz" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        Email Us
+      </a>
+      <div class="contact-dets">
+        <div class="contact-det">
+          <div class="det-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><span class="det-label">Find Us</span><span class="det-val">516 East Street, Ashburton 7700</span></div>
+        </div>
+        <div class="contact-det">
+          <div class="det-icon"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <div><span class="det-label">Email</span><span class="det-val" id="emailText">avaufoaga1 [at] hotmail</span></div>
+        </div>
+        <div class="contact-det">
+          <div class="det-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><span class="det-label">Hours</span><span class="det-val">Mon and Tue 8:30am to 5:00pm<br>Wed to Sat 8:30am to 8:00pm<br>Sunday closed</span></div>
+        </div>
+        <div class="contact-det">
+          <div class="det-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div>
+            <span class="det-label">Follow Us</span>
+            <div class="socials">
+              <a class="social-btn" href="https://www.facebook.com/p/AF-Island-Taste-100073558551741/" target="_blank" rel="noopener" aria-label="A and F Island Taste on Facebook">
+                <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.09 24 12.07z"/></svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="socials">
-        <a href="https://www.facebook.com/p/AF-Island-Taste-100073558551741/" target="_blank" rel="noopener" aria-label="A & F Island Taste on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.9h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
-        <a href="https://www.instagram.com/explore/search/keyword/?q=A%20%26%20F%20Island%20Taste" target="_blank" rel="noopener" aria-label="Search A & F Island Taste on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.71 3.71 0 01-1.38-.9 3.71 3.71 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.52.01-4.77.07-1.08.05-1.67.23-2.06.38-.52.2-.89.44-1.28.83-.39.39-.63.76-.83 1.28-.15.39-.33.98-.38 2.06-.06 1.25-.07 1.62-.07 4.77s.01 3.52.07 4.77c.05 1.08.23 1.67.38 2.06.2.52.44.89.83 1.28.39.39.76.63 1.28.83.39.15.98.33 2.06.38 1.25.06 1.62.07 4.77.07s3.52-.01 4.77-.07c1.08-.05 1.67-.23 2.06-.38.52-.2.89-.44 1.28-.83.39-.39.63-.76.83-1.28.15-.39.33-.98.38-2.06.06-1.25.07-1.62.07-4.77s-.01-3.52-.07-4.77c-.05-1.08-.23-1.67-.38-2.06-.2-.52-.44-.89-.83-1.28a3.44 3.44 0 00-1.28-.83c-.39-.15-.98-.33-2.06-.38-1.25-.06-1.62-.07-4.77-.07zm0 3.07a5.13 5.13 0 110 10.26 5.13 5.13 0 010-10.26zm0 8.46a3.33 3.33 0 100-6.66 3.33 3.33 0 000 6.66zm5.34-8.67a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a>
-        <a href="https://www.tiktok.com/search?q=A%20%26%20F%20Island%20Taste" target="_blank" rel="noopener" aria-label="Search A & F Island Taste on TikTok"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.9 2.9 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.3 0 .58.05.85.13V9.4a6.33 6.33 0 00-1-.05A6.34 6.34 0 003.7 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.74-.1z"/></svg></a>
-      </div>
-    </div>
-    <div class="contact-actions reveal">
-      <h3>Order for pick-up</h3>
-      <p>Call us to order buns, donut boxes, catering or keke saiga postage — or send us an email and we'll get back to you.</p>
-      <a class="btn btn-accent btn-block" href="tel:+6433071322">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-        Call A &amp; F Island Taste</a>
-      <a class="btn btn-ghost btn-block" href="#" data-gmail data-user="avaufoaga1" data-domain="hotmail.co.nz" data-su="Order%20enquiry%20%E2%80%94%20A%20%26%20F%20Island%20Taste" data-body="Talofa%2C%0A%0AI%27d%20like%20to%20place%20an%20order%20with%20A%20%26%20F%20Island%20Taste.%0A%0AThanks%21">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
-        Email A &amp; F Island Taste</a>
     </div>
   </div>
 </section>
 
-<!-- MAP -->
-<div class="map-wrap">
-  <div class="wrap">
-    <iframe title="Map showing A & F Island Taste, 516 East Street, Ashburton" src="https://www.google.com/maps?q=A%20%26%20F%20Island%20Taste%2C%20516%20East%20Street%2C%20Ashburton%2C%20New%20Zealand&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-  </div>
-</div>
-
-</main>
-
+<!-- ════════════ FOOTER ════════════ -->
 <footer>
-  <div class="wrap foot">
-    <small>&copy; 2026 A &amp; F Island Taste &middot; 516 East Street, Ashburton</small>
-    <div class="foot-links">
-      <a href="terms.html">Terms &amp; Conditions</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-    <div class="socials">
-      <a href="https://www.facebook.com/p/AF-Island-Taste-100073558551741/" target="_blank" rel="noopener" aria-label="A & F Island Taste on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.9h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
-      <a href="https://www.instagram.com/explore/search/keyword/?q=A%20%26%20F%20Island%20Taste" target="_blank" rel="noopener" aria-label="Search A & F Island Taste on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.71 3.71 0 01-1.38-.9 3.71 3.71 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.52.01-4.77.07-1.08.05-1.67.23-2.06.38-.52.2-.89.44-1.28.83-.39.39-.63.76-.83 1.28-.15.39-.33.98-.38 2.06-.06 1.25-.07 1.62-.07 4.77s.01 3.52.07 4.77c.05 1.08.23 1.67.38 2.06.2.52.44.89.83 1.28.39.39.76.63 1.28.83.39.15.98.33 2.06.38 1.25.06 1.62.07 4.77.07s3.52-.01 4.77-.07c1.08-.05 1.67-.23 2.06-.38.52-.2.89-.44 1.28-.83.39-.39.63-.76.83-1.28.15-.39.33-.98.38-2.06.06-1.25.07-1.62.07-4.77s-.01-3.52-.07-4.77c-.05-1.08-.23-1.67-.38-2.06-.2-.52-.44-.89-.83-1.28a3.44 3.44 0 00-1.28-.83c-.39-.15-.98-.33-2.06-.38-1.25-.06-1.62-.07-4.77-.07zm0 3.07a5.13 5.13 0 110 10.26 5.13 5.13 0 010-10.26zm0 8.46a3.33 3.33 0 100-6.66 3.33 3.33 0 000 6.66zm5.34-8.67a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a>
-      <a href="https://www.tiktok.com/search?q=A%20%26%20F%20Island%20Taste" target="_blank" rel="noopener" aria-label="Search A & F Island Taste on TikTok"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.9 2.9 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.3 0 .58.05.85.13V9.4a6.33 6.33 0 00-1-.05A6.34 6.34 0 003.7 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.74-.1z"/></svg></a>
-    </div>
-  </div>
+  <div class="footer-logo"><img src="img/logo.png" alt="A &amp; F Island Taste logo"></div>
+  <nav class="footer-nav">
+    <a href="#about">About</a>
+    <a href="#menu">The Kai</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Find Us</a>
+  </nav>
+  <div class="footer-copy">© 2026 A &amp; F Island Taste. Ashburton.</div>
 </footer>
 
+<div id="topSentinel" style="position:absolute;top:0;left:0;width:1px;height:80px;pointer-events:none;"></div>
+
 <script>
-(function(){
-  // Intro overlay
-  var intro=document.getElementById('intro');
-  window.addEventListener('load',function(){setTimeout(function(){intro.classList.add('gone');},900);});
-  setTimeout(function(){intro.classList.add('gone');},2600);
+  // Intro loading screen
+  const intro = document.getElementById('intro');
+  const dismissIntro = () => intro.classList.add('done');
+  addEventListener('load', () => setTimeout(dismissIntro, 500));
+  setTimeout(dismissIntro, 2400);
 
-  // Header background on scroll
-  var header=document.getElementById('header');
-  var onScroll=function(){header.classList.toggle('solid',window.scrollY>40);};
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  // Nav background once the page top scrolls away
+  const nav = document.getElementById('nav');
+  new IntersectionObserver(([e]) => {
+    nav.classList.toggle('scrolled', !e.isIntersecting);
+  }).observe(document.getElementById('topSentinel'));
 
-  // Mobile menu
-  var burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
-  burger.addEventListener('click',function(){
-    var open=menu.classList.toggle('open');
-    burger.setAttribute('aria-expanded',open?'true':'false');
-    header.classList.add('solid');
-  });
-  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
-
-  // Hero rotation (lazy-load later slides, pause on reduced motion)
-  var slides=Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
-  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!reduced&&slides.length>1){
-    slides.forEach(function(s){var src=s.getAttribute('data-src');if(src){s.style.backgroundImage="url('"+src+"')";}});
-    var i=0;
-    setInterval(function(){
-      slides[i].classList.remove('on');
-      i=(i+1)%slides.length;
-      slides[i].classList.add('on');
-    },5500);
+  // Rotating hero, paused for reduced motion
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && slides.length > 1) {
+    let cur = 0;
+    setInterval(() => {
+      slides[cur].classList.remove('active');
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add('active');
+    }, 5500);
   }
 
-  // Reveal on scroll
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+  revealEls.forEach(el => obs.observe(el));
 
-  // Gmail compose links (email built in JS so it can't be scraped/rewritten)
-  document.querySelectorAll('a[data-gmail]').forEach(function(a){
-    var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');
-    a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');
-    a.target='_blank';a.rel='noopener';
-    var t=a.querySelector('[data-email-text]');
-    if(t){t.textContent=to;}
-  });
-})();
+  // Email assembled from split parts so it survives scraping
+  const eb = document.getElementById('emailBtn');
+  const addr = eb.dataset.user + '@' + eb.dataset.domain;
+  eb.href = 'https://mail.google.com/mail/?view=cm&fm=1&to=' + addr +
+    '&su=' + encodeURIComponent('Enquiry from the A & F Island Taste website');
+  document.getElementById('emailText').textContent = addr;
 </script>
 </body>
 </html>
